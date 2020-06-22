@@ -1,4 +1,14 @@
 # ASP.NET
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(2045a61a-e4ab-4d4e-9add-d606ccdbe160)'
+    appType: 'webApp'
+    appName: 'NotejamAppService'
+    deployToSlotOrASE: true
+    resourceGroupName: 'NotejamRGroup'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
